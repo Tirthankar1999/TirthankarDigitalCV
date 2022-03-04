@@ -8,7 +8,7 @@
 }
 body
 {
-    background: skyblue;
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,9 +30,33 @@ body
 
 .container .left_side {
     position: relative;
-    background: yellowgreen;
+    background: lightcoral;
     padding: 40px;
+    animation-name: tirtho1;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    
+}
 
+@keyframes tirtho1 {
+    0%{
+        top:0px;
+        left:0px;
+    }
+    25%{
+        top: 250px;
+        left: 0px;
+    }
+    75%{
+        top: 250px;
+        left: 250px;
+    }
+    100%{
+        top: 0px;
+        left: 250px;
+    }
+
+    
 }
 .profileText
 {
@@ -209,4 +233,61 @@ body
         grid-template-columns: repeat(1,1fr);
     }
 
+}
+
+.icons .social::before{
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: aqua;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.60, 0.265, 2);
+}
+.icons .icon:hover .social {
+    top: -45px;
+    opacity: 1.1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.icons .icon:hover span,
+.icons .icon:hover .social {
+    text-shadow: 0px -1 0px rgba(0, 1, 1, 1);
+}
+
+.icons .facebook:hover ,
+.icons .facebook:hover .social,
+.icons .facebook:hover .social::before {
+    background-color: darkgrey;
+    color: skyblue;
+}
+
+.icons .linkedin:hover ,
+.icons .linkedin:hover .social,
+.icons .linkdedin:hover .social::before {
+    background-color: darkgrey;
+    color: blue;
+}
+
+.icons .github:hover ,
+.icons .github:hover .social,
+.icons .github:hover .social::before {
+    background-color:  darkgrey;
+    color: black;
+}
+
+.my_button{
+    width: 80px;
+    height: 30px;
+    font-size: 20px;
+    color: red;
+    font-style: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: wheat;
+    border: 1px solid black;
+   
+    
 }
